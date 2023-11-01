@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         //val fragment1 = SomeListFragment.newInstance(bArray)
-        val fragment2 = SomeDisplayFragment.newInstance(bArray[0].title)
+        val fragment2 = SomeDisplayFragment.newInstance(bArray[0].title,bArray[0].author)
 
         //.add(R.id.fragmentContainerView,fragment1)
         //.add(R.id.fragmentContainerView2,fragment2)

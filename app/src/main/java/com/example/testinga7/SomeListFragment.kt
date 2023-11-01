@@ -11,8 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val TEXT_ARRAY_KEY = "param11"
 
 class SomeListFragment : Fragment() {
@@ -70,7 +69,7 @@ class BookListAdapter(private val _books: ArrayList<Book>, private val cBack: (B
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_some_list,parent,false))
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_item,parent,false))
     }
 
     override fun getItemCount() = books.size
