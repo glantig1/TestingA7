@@ -16,7 +16,7 @@ private const val OG_TEXT_KEY = "param1"
 class SomeDisplayFragment : Fragment() {
 
     private val CURRENT_TEXT_KEY = "parram"
-    private var currentTextId = 0
+    private var currentTextId = "test"
 
     private lateinit var textView: TextView
     private lateinit var textView2: TextView
@@ -25,11 +25,11 @@ class SomeDisplayFragment : Fragment() {
         super.onCreate(savedInstanceState)
         if(savedInstanceState == null) {
             arguments?.run {
-                currentTextId = getInt(OG_TEXT_KEY)
+                currentTextId = getString(OG_TEXT_KEY).toString()
             }
         }
         else{
-            currentTextId = savedInstanceState.getInt(OG_TEXT_KEY)
+            currentTextId = savedInstanceState.getString(OG_TEXT_KEY).toString()
         }
 
     }
@@ -47,8 +47,8 @@ class SomeDisplayFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         savedInstanceState?.run{
-            currentTextId = getInt(CURRENT_TEXT_KEY)
-            if(currentTextId == 0) changeText(currentTextId)
+            currentTextId = getString(CURRENT_TEXT_KEY).toString()
+            if(currentTextId == "test") changeText(currentTextId)
         }
         changeText(currentTextId)
     }
@@ -57,8 +57,8 @@ class SomeDisplayFragment : Fragment() {
 
         outState.putString(CURRENT_TEXT_KEY, currentTextId.toString())
     }
-    fun changeText(textID:Int){
-        textView.setText(textID.toString())
+    fun changeText(textID:String){
+        textView.setText(textID)
     }
     companion object {
         @JvmStatic

@@ -41,7 +41,6 @@ class SomeListFragment : Fragment() {
         with(view as RecyclerView){
             layoutManager = GridLayoutManager(requireContext(), 2)
             adapter = BookListAdapter(textArray){
-
             }
         }
     }
@@ -64,8 +63,7 @@ class BookListAdapter(private val _books: ArrayList<Book>, private val cBack: (B
     private val callback = cBack
     inner class MyViewHolder(layout: View) : RecyclerView.ViewHolder(layout){
         val title = layout.findViewById<TextView>(R.id.bookTitleTextView)
-        val author = layout.findViewById<TextView>(R.id.bookAuthorTextView)
-
+        //val author = layout.findViewById<TextView>(R.id.bookAuthorTextView)
         init {
             title.setOnClickListener{callback(books[adapterPosition])}
         }
@@ -79,7 +77,7 @@ class BookListAdapter(private val _books: ArrayList<Book>, private val cBack: (B
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = books[position].title
-        holder.author.text = books[position].author
+        //holder.author.text = books[position].author
     }
 
 

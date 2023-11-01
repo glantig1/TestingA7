@@ -24,13 +24,14 @@ class MainActivity : AppCompatActivity() {
             Book(titleRes[9],authorRes[9]),
         )
 
-        val fragment1 = SomeListFragment.newInstance(bArray)
+        //val fragment1 = SomeListFragment.newInstance(bArray)
         val fragment2 = SomeDisplayFragment.newInstance(bArray[0].title)
 
         //.add(R.id.fragmentContainerView,fragment1)
         //.add(R.id.fragmentContainerView2,fragment2)
         supportFragmentManager
             .beginTransaction()
+            .add(R.id.fragmentContainerView2,fragment2)
             .addToBackStack(null)
             .setReorderingAllowed(true)
             .commit()
