@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Floss Player</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array
+        name="title_array_name">
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 3</item>
+        <item>Book 4</item>
+        <item>Book 5</item>
+        <item>Book 6</item>
+        <item>Book 7</item>
+        <item>Book 8</item>
+        <item>Book 9</item>
+        <item>Book 10</item>
+    </string-array>
+    <string-array
+        name="author_array_name">
+        <item>Author 1</item>
+        <item>Author 2</item>
+        <item>Author 3</item>
+        <item>Author 4</item>
+        <item>Author 5</item>
+        <item>Author 6</item>
+        <item>Author 7</item>
+        <item>Author 8</item>
+        <item>Author 9</item>
+        <item>Author 10</item>
+    </string-array>
+</resources>
